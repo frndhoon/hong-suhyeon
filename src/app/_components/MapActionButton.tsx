@@ -40,7 +40,7 @@ export const MapActionButton = ({ address }: { address: string }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 w-48 z-10">
+        <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 w-48 z-10">
           <div className="flex flex-col gap-2 p-2">
             <button
               className="p-2 hover:bg-gray-50 rounded-lg text-left"
