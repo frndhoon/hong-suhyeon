@@ -6,13 +6,12 @@ import Image from 'next/image';
 import { ImageWithModal } from '@/app/_components/ImageWithModal';
 import { NaverMap } from '@/app/_components/NaverMap';
 import { MapActionButton } from '@/app/_components/MapActionButton';
+import { AccountSelectBox } from '@/app/_components/AccountSelectBox';
 import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 import subWeddingImg from '@/public/images/subWeddingImg.jpg';
 import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
 
 export default function Home() {
-  const [isGroomOpen, setIsGroomOpen] = useState(false);
-  const [isBrideOpen, setIsBrideOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, setSliderRef] = useState<Slider | null>(null);
 
@@ -139,55 +138,47 @@ export default function Home() {
         </section>
         <section className="w-full flex flex-col items-center gap-2">
           <h1>마음 전하실 곳</h1>
-          <div className="w-full flex flex-col gap-4 items-center">
-            <div className="w-[300px] border rounded-lg p-4 transition-all duration-300">
-              <button
-                onClick={() => setIsGroomOpen(!isGroomOpen)}
-                className="w-full text-left cursor-pointer hover:text-gray-600"
-              >
-                신랑측 계좌번호
-              </button>
-              {isGroomOpen && (
-                <div className="mt-4 flex flex-col gap-2 animate-fadeIn">
-                  <div className="hover:bg-gray-50 p-2 rounded transition-colors">
-                    <p className="font-medium">신랑 김홍</p>
-                    <p>카카오뱅크 3333-04-5085349</p>
-                  </div>
-                  <div className="hover:bg-gray-50 p-2 rounded transition-colors">
-                    <p className="font-medium">아버지 김완수</p>
-                    <p>우리은행 010-9999-3402</p>
-                  </div>
-                  <div className="hover:bg-gray-50 p-2 rounded transition-colors">
-                    <p className="font-medium">어머니 권가영</p>
-                    <p>농협은행 302-1008-6057-51</p>
-                  </div>
-                </div>
-              )}
-            </div>
-            <div className="w-[300px] border rounded-lg p-4 transition-all duration-300">
-              <button
-                onClick={() => setIsBrideOpen(!isBrideOpen)}
-                className="w-full text-left cursor-pointer hover:text-gray-600"
-              >
-                신부측 계좌번호
-              </button>
-              {isBrideOpen && (
-                <div className="mt-4 flex flex-col gap-2 animate-fadeIn">
-                  <div className="hover:bg-gray-50 p-2 rounded transition-colors">
-                    <p className="font-medium">신부 김수현</p>
-                    <p>카카오뱅크 3333-07-0061867</p>
-                  </div>
-                  <div className="hover:bg-gray-50 p-2 rounded transition-colors">
-                    <p className="font-medium">아버지 김성규</p>
-                    <p>국민은행 801301-01-345656</p>
-                  </div>
-                  <div className="hover:bg-gray-50 p-2 rounded transition-colors">
-                    <p className="font-medium">어머니 이금란</p>
-                    <p>국민은행 99927711449</p>
-                  </div>
-                </div>
-              )}
-            </div>
+          <div className="w-full flex flex-col gap-2 items-center">
+            <AccountSelectBox
+              title="신랑측 계좌번호"
+              accounts={[
+                {
+                  name: '신랑 김홍',
+                  accountName: '카카오뱅크',
+                  accountNumber: '3333-04-5085349',
+                },
+                {
+                  name: '아버지 김완수',
+                  accountName: '우리은행',
+                  accountNumber: '010-9999-3402',
+                },
+                {
+                  name: '어머니 권가영',
+                  accountName: '농협은행',
+                  accountNumber: '302-1008-6057-51',
+                },
+              ]}
+            />
+            <AccountSelectBox
+              title="신부측 계좌번호"
+              accounts={[
+                {
+                  name: '신부 김수현',
+                  accountName: '카카오뱅크',
+                  accountNumber: '3333-07-0061867',
+                },
+                {
+                  name: '아버지 김성규',
+                  accountName: '국민은행',
+                  accountNumber: '801301-01-345656',
+                },
+                {
+                  name: '어머니 이금란',
+                  accountName: '국민은행',
+                  accountNumber: '99927711449',
+                },
+              ]}
+            />
           </div>
         </section>
       </main>
