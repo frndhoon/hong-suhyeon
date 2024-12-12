@@ -11,7 +11,11 @@ interface ImageWithModalProps {
   height?: number;
   priority?: boolean;
   className?: string;
+  currentSlide?: number;
+  isSlide?: boolean;
 }
+
+const totalSlides = 7;
 
 export const ImageWithModal = ({
   src,
@@ -19,6 +23,8 @@ export const ImageWithModal = ({
   width = 500,
   height = 300,
   className = '',
+  currentSlide = 0,
+  isSlide = false,
 }: ImageWithModalProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -36,7 +42,7 @@ export const ImageWithModal = ({
       {isModalOpen &&
         createPortal(
           <div
-            className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-4 cursor-zoom-out"
+            className="fixed inset-0 backdrop-blur-sm flex flex-col items-center justify-center z-50 p-4 cursor-zoom-out gap-3"
             onClick={() => setIsModalOpen(false)}
           >
             <div className="relative max-w-[90vw] max-h-[90vh]">
@@ -49,6 +55,9 @@ export const ImageWithModal = ({
                 onClick={() => setIsModalOpen(false)}
               />
             </div>
+            <p className="text-md">
+              {isSlide ? `${totalSlides}장 중 ${currentSlide + 1}장` : ''}
+            </p>
           </div>,
           document.body
         )}

@@ -107,6 +107,8 @@ export default function Home() {
                       width={500}
                       height={300}
                       className="rounded-lg w-full"
+                      currentSlide={currentSlide}
+                      isSlide={true}
                     />
                   ) : (
                     <Image
