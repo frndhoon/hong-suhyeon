@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { createPortal } from 'react-dom';
 
 interface ImageWithModalProps {
   src: string | StaticImageData;
@@ -32,29 +33,31 @@ export const ImageWithModal = ({
         onClick={() => setIsModalOpen(true)}
       />
 
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={() => setIsModalOpen(false)}
-        >
-          <div className="relative max-w-[90vw] max-h-[90vh]">
-            <Image
-              src={src}
-              alt={alt}
-              width={width}
-              height={height}
-              className="w-auto h-auto max-w-full max-h-[90vh] object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button
-              className="absolute top-4 right-4 text-white hover:text-gray-300"
-              onClick={() => setIsModalOpen(false)}
-            >
-              닫기
-            </button>
-          </div>
-        </div>
-      )}
+      {isModalOpen &&
+        createPortal(
+          <div
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+            onClick={() => setIsModalOpen(false)}
+          >
+            <div className="relative max-w-[90vw] max-h-[90vh]">
+              <Image
+                src={src}
+                alt={alt}
+                width={width}
+                height={height}
+                className="w-auto h-auto max-w-full max-h-[90vh] object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute top-4 right-4 text-white hover:text-gray-300"
+                onClick={() => setIsModalOpen(false)}
+              >
+                닫기
+              </button>
+            </div>
+          </div>,
+          document.body
+        )}
     </>
   );
 };
