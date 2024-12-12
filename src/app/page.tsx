@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Slider from 'react-slick';
 import { ImageWithModal } from '@/app/_components/ImageWithModal';
+import { NaverMap } from '@/app/_components/NaverMap';
 import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 import subWeddingImg from '@/public/images/subWeddingImg.jpg';
 import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
@@ -93,8 +94,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
+        <section className="w-full flex flex-col items-center">
           <h1>오시는 길</h1>
+          <NaverMap />
           <p>경북 포항시 남구 희망대로 815</p>
           <p>티파니웨딩 5F 컨벤션홀</p>
           <p>054-283-0077</p>
