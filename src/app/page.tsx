@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Slider from 'react-slick';
+import Image from 'next/image';
 import { ImageWithModal } from '@/app/_components/ImageWithModal';
 import { NaverMap } from '@/app/_components/NaverMap';
 import { MapActionButton } from '@/app/_components/MapActionButton';
@@ -12,6 +13,8 @@ import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
 export default function Home() {
   const [isGroomOpen, setIsGroomOpen] = useState(false);
   const [isBrideOpen, setIsBrideOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const sliderSettings = {
     dots: true,
     className: 'center',
@@ -20,6 +23,9 @@ export default function Home() {
     centerPadding: '60px',
     slidesToShow: 3,
     speed: 500,
+    beforeChange: (currentSlide: number, nextSlide: number) => {
+      setCurrentSlide(nextSlide);
+    },
   };
   return (
     <>
@@ -82,13 +88,23 @@ export default function Home() {
             <Slider {...sliderSettings}>
               {Array.from({ length: 7 }).map((_, index) => (
                 <div className="px-2 center-slide" key={index + 1}>
-                  <ImageWithModal
-                    src={`/images/weddingImg0${index + 1}.jpg`}
-                    alt="웨딩 사진"
-                    width={500}
-                    height={300}
-                    className="rounded-lg w-full"
-                  />
+                  {currentSlide === index ? (
+                    <ImageWithModal
+                      src={`/images/weddingImg0${index + 1}.jpg`}
+                      alt="웨딩 사진"
+                      width={500}
+                      height={300}
+                      className="rounded-lg w-full"
+                    />
+                  ) : (
+                    <Image
+                      src={`/images/weddingImg0${index + 1}.jpg`}
+                      alt="웨딩 사진"
+                      width={500}
+                      height={300}
+                      className="rounded-lg w-full"
+                    />
+                  )}
                 </div>
               ))}
             </Slider>
