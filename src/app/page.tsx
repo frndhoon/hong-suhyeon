@@ -124,15 +124,15 @@ export default function Home() {
                 <div className="mt-4 flex flex-col gap-2 animate-fadeIn">
                   <div className="hover:bg-gray-50 p-2 rounded transition-colors">
                     <p className="font-medium">신랑 김홍</p>
-                    <p>카카오뱅크 3333-01-1234567</p>
+                    <p>카카오뱅크 3333-04-5085349</p>
                   </div>
                   <div className="hover:bg-gray-50 p-2 rounded transition-colors">
                     <p className="font-medium">아버지 김완수</p>
-                    <p>국민은행 123-12-1234567</p>
+                    <p>우리은행 010-9999-3402</p>
                   </div>
                   <div className="hover:bg-gray-50 p-2 rounded transition-colors">
                     <p className="font-medium">어머니 권가영</p>
-                    <p>신한은행 110-123-123456</p>
+                    <p>농협은행 302-1008-6057-51</p>
                   </div>
                 </div>
               )}
@@ -148,15 +148,15 @@ export default function Home() {
                 <div className="mt-4 flex flex-col gap-2 animate-fadeIn">
                   <div className="hover:bg-gray-50 p-2 rounded transition-colors">
                     <p className="font-medium">신부 김수현</p>
-                    <p>토스뱅크 1000-1234-5678</p>
+                    <p>카카오뱅크 3333-07-0061867</p>
                   </div>
                   <div className="hover:bg-gray-50 p-2 rounded transition-colors">
                     <p className="font-medium">아버지 김성규</p>
-                    <p>우리은행 1002-123-123456</p>
+                    <p>국민은행 801301-01-345656</p>
                   </div>
                   <div className="hover:bg-gray-50 p-2 rounded transition-colors">
                     <p className="font-medium">어머니 이금란</p>
-                    <p>농협 123-1234-1234-12</p>
+                    <p>국민은행 99927711449</p>
                   </div>
                 </div>
               )}
