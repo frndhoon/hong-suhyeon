@@ -14,6 +14,7 @@ export default function Home() {
   const [isGroomOpen, setIsGroomOpen] = useState(false);
   const [isBrideOpen, setIsBrideOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [sliderRef, setSliderRef] = useState<Slider | null>(null);
 
   const sliderSettings = {
     dots: true,
@@ -27,6 +28,13 @@ export default function Home() {
       setCurrentSlide(nextSlide);
     },
   };
+
+  const handleImageClick = (index: number) => {
+    if (sliderRef) {
+      sliderRef.slickGoTo(index);
+    }
+  };
+
   return (
     <>
       <main className="w-full max-w-[600px] mx-auto px-4 flex flex-col items-center gap-2">
@@ -85,9 +93,13 @@ export default function Home() {
         </section>
         <section className="w-full">
           <div className="slider-container">
-            <Slider {...sliderSettings}>
+            <Slider ref={setSliderRef} {...sliderSettings}>
               {Array.from({ length: 7 }).map((_, index) => (
-                <div className="px-2 center-slide" key={index + 1}>
+                <div
+                  className="px-2 center-slide cursor-pointer"
+                  key={index + 1}
+                  onClick={() => handleImageClick(index)}
+                >
                   {currentSlide === index ? (
                     <ImageWithModal
                       src={`/images/weddingImg0${index + 1}.jpg`}
