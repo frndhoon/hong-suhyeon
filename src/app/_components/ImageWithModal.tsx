@@ -29,14 +29,14 @@ export const ImageWithModal = ({
         alt={alt}
         width={width}
         height={height}
-        className={`cursor-pointer ${className}`}
+        className={`cursor-zoom-in ${className}`}
         onClick={() => setIsModalOpen(true)}
       />
 
       {isModalOpen &&
         createPortal(
           <div
-            className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-4 "
+            className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-4 cursor-zoom-out"
             onClick={() => setIsModalOpen(false)}
           >
             <div className="relative max-w-[90vw] max-h-[90vh]">
@@ -45,15 +45,9 @@ export const ImageWithModal = ({
                 alt={alt}
                 width={width}
                 height={height}
-                className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-xl rounded-lg"
-                onClick={(e) => e.stopPropagation()}
-              />
-              <button
-                className="absolute top-4 right-4 text-white hover:text-gray-300"
+                className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-lg shadow-xl"
                 onClick={() => setIsModalOpen(false)}
-              >
-                닫기
-              </button>
+              />
             </div>
           </div>,
           document.body
