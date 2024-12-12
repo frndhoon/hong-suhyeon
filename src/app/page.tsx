@@ -1,7 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Slider from 'react-slick';
+import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
+import subWeddingImg from '@/public/images/subWeddingImg.jpg';
+import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
 
 export default function Home() {
   const [isGroomOpen, setIsGroomOpen] = useState(false);
@@ -19,9 +23,11 @@ export default function Home() {
     <>
       <main className="w-full max-w-[600px] mx-auto px-4 flex flex-col items-center gap-2">
         <section className="w-full flex flex-col items-center">
-          <img
-            src="https://via.placeholder.com/500x300?text=Wedding+Photo"
+          <Image
+            src={mainWeddingImg}
             alt="웨딩 사진"
+            width={500}
+            height={300}
             className="my-4 rounded-lg w-full max-w-[500px]"
           />
           <h1>WEDDING INVITATION</h1>
@@ -31,9 +37,11 @@ export default function Home() {
           <p>티파니웨딩청솔밭 5F</p>
         </section>
         <section className="w-full flex flex-col items-center">
-          <img
-            src="https://via.placeholder.com/500x300?text=Wedding+Photo"
+          <Image
+            src={subWeddingImg}
             alt="웨딩 사진"
+            width={500}
+            height={300}
             className="my-4 rounded-lg w-full max-w-[500px]"
           />
           <p>오셔서 축하해주시면 감사하겠습니다.</p>
@@ -58,8 +66,10 @@ export default function Home() {
           </button>
         </section>
         <section>
-          <img
-            src="https://via.placeholder.com/500x300?text=Wedding+Photo"
+          <Image
+            src={calendarWeddingImg}
+            width={500}
+            height={300}
             alt="웨딩 사진"
             className="my-4 rounded-lg w-full max-w-[500px]"
           />
@@ -67,45 +77,23 @@ export default function Home() {
         <section className="w-full">
           <div className="slider-container">
             <Slider {...sliderSettings}>
-              <div className="px-2 center-slide">
-                <img
-                  src="https://via.placeholder.com/200x200?text=Wedding+Photo"
-                  alt="웨딩 사진"
-                  className="rounded-lg w-full"
-                />
-              </div>
-              <div className="px-2">
-                <img
-                  src="https://via.placeholder.com/200x200?text=Wedding+Photo"
-                  alt="웨딩 사진"
-                  className="rounded-lg w-full"
-                />
-              </div>
-              <div className="px-2">
-                <img
-                  src="https://via.placeholder.com/200x200?text=Wedding+Photo"
-                  alt="웨딩 사진"
-                  className="rounded-lg w-full"
-                />
-              </div>
-              <div className="px-2">
-                <img
-                  src="https://via.placeholder.com/200x200?text=Wedding+Photo"
-                  alt="웨딩 사진"
-                  className="rounded-lg w-full"
-                />
-              </div>
+              {Array.from({ length: 7 }).map((_, index) => (
+                <div className="px-2 center-slide" key={index + 1}>
+                  <Image
+                    src={`/images/weddingImg0${index + 1}.jpg`}
+                    alt="웨딩 사진"
+                    width={500}
+                    height={300}
+                    className="rounded-lg w-full"
+                  />
+                </div>
+              ))}
             </Slider>
           </div>
         </section>
 
         <section>
           <h1>오시는 길</h1>
-          <img
-            src="https://via.placeholder.com/500x300?text=Wedding+Venue+Map"
-            alt="웨딩홀 위치"
-            className="my-4 rounded-lg w-full max-w-[500px]"
-          />
           <p>경북 포항시 남구 희망대로 815</p>
           <p>티파니웨딩 5F 컨벤션홀</p>
           <p>054-283-0077</p>
