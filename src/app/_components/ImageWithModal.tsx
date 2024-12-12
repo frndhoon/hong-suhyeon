@@ -36,7 +36,7 @@ export const ImageWithModal = ({
       {isModalOpen &&
         createPortal(
           <div
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-4 "
             onClick={() => setIsModalOpen(false)}
           >
             <div className="relative max-w-[90vw] max-h-[90vh]">
@@ -45,7 +45,7 @@ export const ImageWithModal = ({
                 alt={alt}
                 width={width}
                 height={height}
-                className="w-auto h-auto max-w-full max-h-[90vh] object-contain"
+                className="w-auto h-auto max-w-full max-h-[90vh] object-contain shadow-xl rounded-lg"
                 onClick={(e) => e.stopPropagation()}
               />
               <button
