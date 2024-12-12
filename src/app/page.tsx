@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Slider from 'react-slick';
+import { ImageWithModal } from '@/app/_components/ImageWithModal';
 import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 import subWeddingImg from '@/public/images/subWeddingImg.jpg';
 import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
@@ -23,11 +23,12 @@ export default function Home() {
     <>
       <main className="w-full max-w-[600px] mx-auto px-4 flex flex-col items-center gap-2">
         <section className="w-full flex flex-col items-center">
-          <Image
+          <ImageWithModal
             src={mainWeddingImg}
-            alt="웨딩 사진"
+            alt="메인 웨딩 사진"
             width={500}
             height={300}
+            priority={true}
             className="my-4 rounded-lg w-full max-w-[500px]"
           />
           <h1>WEDDING INVITATION</h1>
@@ -37,9 +38,9 @@ export default function Home() {
           <p>티파니웨딩청솔밭 5F</p>
         </section>
         <section className="w-full flex flex-col items-center">
-          <Image
+          <ImageWithModal
             src={subWeddingImg}
-            alt="웨딩 사진"
+            alt="서브 웨딩 사진"
             width={500}
             height={300}
             className="my-4 rounded-lg w-full max-w-[500px]"
@@ -66,11 +67,11 @@ export default function Home() {
           </button>
         </section>
         <section>
-          <Image
+          <ImageWithModal
             src={calendarWeddingImg}
+            alt="웨딩 사진"
             width={500}
             height={300}
-            alt="웨딩 사진"
             className="my-4 rounded-lg w-full max-w-[500px]"
           />
         </section>
@@ -79,7 +80,7 @@ export default function Home() {
             <Slider {...sliderSettings}>
               {Array.from({ length: 7 }).map((_, index) => (
                 <div className="px-2 center-slide" key={index + 1}>
-                  <Image
+                  <ImageWithModal
                     src={`/images/weddingImg0${index + 1}.jpg`}
                     alt="웨딩 사진"
                     width={500}
