@@ -11,6 +11,7 @@ import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 import subWeddingImg from '@/public/images/subWeddingImg.jpg';
 import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
 import { ContactModal } from '@/components/ContactModal';
+import { ShareButton } from '@/components/ShareButton';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -254,6 +255,9 @@ export default function Home() {
               ]}
             />
           </div>
+        </section>
+        <section className="w-full flex flex-col items-center mt-10">
+          <ShareButton />
         </section>
       </main>
       <footer className="w-full text-center py-4">
