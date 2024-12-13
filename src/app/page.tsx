@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
-import { ImageWithModal } from '@/app/_components/ImageWithModal';
-import { NaverMap } from '@/app/_components/NaverMap';
-import { MapActionButton } from '@/app/_components/MapActionButton';
-import { AccountSelectBox } from '@/app/_components/AccountSelectBox';
+import { ImageWithModal } from '@/components/ImageWithModal';
+import { NaverMap } from '@/components/NaverMap';
+import { MapActionButton } from '@/components/MapActionButton';
+import { AccountSelectBox } from '@/components/AccountSelectBox';
 import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 import subWeddingImg from '@/public/images/subWeddingImg.jpg';
 import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
