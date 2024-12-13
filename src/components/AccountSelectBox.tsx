@@ -41,7 +41,7 @@ export const AccountSelectBox = ({
 
   return (
     <div className="w-full flex flex-col gap-4 items-center">
-      <div className="w-[400px] border rounded-lg p-4">
+      <div className="w-full max-w-[400px] border rounded-lg p-4 mx-2">
         <button
           onClick={() => setIsSelectedOpen(!isSelectedOpen)}
           className="w-full text-left cursor-pointer hover:text-gray-600"
