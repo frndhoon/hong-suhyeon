@@ -27,15 +27,32 @@ body {
   @apply opacity-100 scale-100;
 }
 
+.slick-prev {
+  left: 0px;
+}
+
+.slick-next {
+  right: 0px;
+}
+
 .slick-prev,
 .slick-next {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
   z-index: 1;
 }
 
-.slick-prev {
-  left: 5px;
+.slick-prev:before,
+.slick-next:before {
+  color: #666;
+  font-size: 20px;
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
-.slick-next {
-  right: 5px;
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #333;
 }

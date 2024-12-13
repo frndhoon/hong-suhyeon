@@ -22,7 +22,7 @@ export default function Home() {
     className: 'center',
     centerMode: true,
     infinite: true,
-    centerPadding: '60px',
+    centerPadding: '15px',
     slidesToShow: 3,
     speed: 500,
     beforeChange: (currentSlide: number, nextSlide: number) => {
