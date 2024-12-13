@@ -10,10 +10,12 @@ import { AccountSelectBox } from '@/components/AccountSelectBox';
 import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 import subWeddingImg from '@/public/images/subWeddingImg.jpg';
 import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
+import { ContactModal } from '@/components/ContactModal';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, setSliderRef] = useState<Slider | null>(null);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const sliderSettings = {
     dots: true,
@@ -28,6 +30,44 @@ export default function Home() {
     },
   };
 
+  const contacts = [
+    {
+      name: '김완수',
+      phoneNumber: '010-9999-3402',
+      relation: '부',
+      side: '신랑',
+    },
+    {
+      name: '권가영',
+      phoneNumber: '010-8519-0041',
+      relation: '모',
+      side: '신랑',
+    },
+    {
+      name: '김홍',
+      phoneNumber: '010-9950-2556',
+      relation: '본인',
+      side: '신랑',
+    },
+    {
+      name: '김성규',
+      phoneNumber: '010-9699-7114',
+      relation: '부',
+      side: '신부',
+    },
+    {
+      name: '이금란',
+      phoneNumber: '010-9927-7114',
+      relation: '모',
+      side: '신부',
+    },
+    {
+      name: '김수현',
+      phoneNumber: '010-2556-7114',
+      relation: '본인',
+      side: '신부',
+    },
+  ];
   const handleImageClick = (index: number) => {
     if (sliderRef) {
       sliderRef.slickGoTo(index);
@@ -77,9 +117,19 @@ export default function Home() {
               <p>의 장녀 수현</p>
             </div>
           </div>
-          <button className="border border-1 rounded-3xl px-2 py-1 hover:text-gray-600">
+          <button
+            className="border border-1 rounded-3xl px-2 py-1 hover:text-gray-600"
+            onClick={() => setIsContactModalOpen(!isContactModalOpen)}
+          >
             연락하기
           </button>
+          {isContactModalOpen && (
+            <ContactModal
+              contacts={contacts}
+              isOpen={isContactModalOpen}
+              onClose={() => setIsContactModalOpen(false)}
+            />
+          )}
         </section>
         <section>
           <ImageWithModal
