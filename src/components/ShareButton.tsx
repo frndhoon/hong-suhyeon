@@ -13,7 +13,7 @@ export const ShareButton = () => {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger>
-        <button>
+        <div>
           <svg
             width="15"
             height="15"
@@ -28,7 +28,7 @@ export const ShareButton = () => {
               clipRule="evenodd"
             ></path>
           </svg>
-        </button>
+        </div>
       </PopoverTrigger>
       <PopoverContent>
         <button className="w-full text-start" onClick={onCopyLink}>
