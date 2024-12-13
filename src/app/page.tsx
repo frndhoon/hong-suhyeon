@@ -16,6 +16,23 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, setSliderRef] = useState<Slider | null>(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalImageIndex, setModalImageIndex] = useState(0);
+
+  const weddingImages = Array.from({ length: 7 }).map(
+    (_, index) => `/images/weddingImg0${index + 1}.jpg`
+  );
+
+  const handlePrevImage = () => {
+    setModalImageIndex((prev) =>
+      prev === 0 ? weddingImages.length - 1 : prev - 1
+    );
+  };
+
+  const handleNextImage = () => {
+    setModalImageIndex((prev) =>
+      prev === weddingImages.length - 1 ? 0 : prev + 1
+    );
+  };
 
   const sliderSettings = {
     dots: true,
@@ -143,25 +160,32 @@ export default function Home() {
         <section className="w-full">
           <div className="slider-container">
             <Slider ref={setSliderRef} {...sliderSettings}>
-              {Array.from({ length: 7 }).map((_, index) => (
+              {weddingImages.map((imageSrc, index) => (
                 <div
                   className="px-2 center-slide cursor-pointer"
-                  key={index + 1}
-                  onClick={() => handleImageClick(index)}
+                  key={index}
+                  onClick={() => {
+                    handleImageClick(index);
+                    setModalImageIndex(index);
+                  }}
                 >
                   {currentSlide === index ? (
                     <ImageWithModal
-                      src={`/images/weddingImg0${index + 1}.jpg`}
+                      src={imageSrc}
                       alt="웨딩 사진"
                       width={500}
                       height={300}
                       className="rounded-lg w-full"
-                      currentSlide={currentSlide}
+                      currentSlide={modalImageIndex}
                       isSlide={true}
+                      totalSlides={weddingImages.length}
+                      currentImage={weddingImages[modalImageIndex]}
+                      onPrevClick={handlePrevImage}
+                      onNextClick={handleNextImage}
                     />
                   ) : (
                     <Image
-                      src={`/images/weddingImg0${index + 1}.jpg`}
+                      src={imageSrc}
                       alt="웨딩 사진"
                       width={500}
                       height={300}
