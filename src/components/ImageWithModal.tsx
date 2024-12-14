@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { createPortal } from 'react-dom';
 
@@ -33,6 +33,14 @@ export const ImageWithModal = ({
   onNextClick,
 }: ImageWithModalProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isModalOpen]);
 
   return (
     <>
