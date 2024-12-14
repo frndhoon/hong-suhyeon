@@ -102,8 +102,9 @@ export default function Home() {
             width={500}
             height={300}
             priority={true}
-            className="my-4 rounded-lg w-full max-w-[500px]"
+            className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
+
           <h1>WEDDING INVITATION</h1>
           <h2>김홍 | 김수현</h2>
           <p>2025년 2월 23일 일요일 오후 1:00</p>
@@ -116,7 +117,7 @@ export default function Home() {
             alt="서브 웨딩 사진"
             width={500}
             height={300}
-            className="my-4 rounded-lg w-full max-w-[500px]"
+            className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
           <p>오셔서 축하해주시면 감사하겠습니다.</p>
           <div>
@@ -155,7 +156,7 @@ export default function Home() {
             alt="웨딩 사진"
             width={500}
             height={300}
-            className="my-4 rounded-lg w-full max-w-[500px]"
+            className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
         </section>
         <section className="w-full">
