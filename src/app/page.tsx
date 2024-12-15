@@ -119,7 +119,13 @@ export default function Home() {
             height={300}
             className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
-          <p>오셔서 축하해주시면 감사하겠습니다.</p>
+          <p>
+            차가운 바람이 따스함을 마주하려 할 때,
+            <br />
+            서로 다른 두 실을 하나의 어여쁜 매듭으로 만들고자 합니다.
+            <br />
+            부디 첫 매듭은 어떨지 함께 해주세요.
+          </p>
           <div>
             <div className="flex flex-row items-center gap-3">
               <div className="flex flex-col">
