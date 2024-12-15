@@ -111,7 +111,7 @@ export default function Home() {
           <hr />
           <p>티파니웨딩청솔밭 5F</p>
         </section>
-        <section className="w-full flex flex-col items-center">
+        <section className="w-full flex flex-col items-center gap-2">
           <ImageWithModal
             src={subWeddingImg}
             alt="서브 웨딩 사진"
@@ -206,7 +206,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full flex flex-col items-center">
+        <section className="w-full flex flex-col items-center gap-2">
           <h1>오시는 길</h1>
           <NaverMap />
           <div className="flex flex-row gap-2 items-start w-full justify-between p-4">
