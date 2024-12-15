@@ -119,7 +119,7 @@ export default function Home() {
             height={300}
             className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
-          <p>
+          <p className="text-md">
             차가운 바람이 따스함을 마주하려 할 때,
             <br />
             서로 다른 두 실을 하나의 어여쁜 매듭으로 만들고자 합니다.
