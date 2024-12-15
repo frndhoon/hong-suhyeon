@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export const MapActionButton = ({ address }: { address: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,7 @@ export const MapActionButton = ({ address }: { address: string }) => {
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(address);
     setIsOpen(false);
+    toast('주소가 복사되었습니다.');
   };
 
   const handleNaverMapClick = () => {
