@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import toast from 'react-hot-toast';
 import tossSymbolIcon from '@/public/icons/tossSymbolIcon.png';
 
 export const AccountSelectBox = ({
@@ -15,6 +16,7 @@ export const AccountSelectBox = ({
 
   const handleAccountCopy = (account: string) => {
     navigator.clipboard.writeText(account);
+    toast('계좌번호가 복사되었습니다.');
   };
 
   const handleTossSend = (account: {
