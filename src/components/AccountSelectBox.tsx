@@ -102,16 +102,13 @@ export const AccountSelectBox = ({
                         </g>
                       </svg>
                     </button>
-                    <button
-                      className="group"
-                      onClick={() => handleTossSend(account)}
-                    >
+                    <button onClick={() => handleTossSend(account)}>
                       <Image
                         src={tossSymbolIcon}
                         alt="toss"
                         width={24}
                         height={24}
-                        className="group-hover:opacity-50 transition-opacity"
+                        className="opacity-70 hover:opacity-100 transition-opacity"
                       />
                     </button>
                   </div>
