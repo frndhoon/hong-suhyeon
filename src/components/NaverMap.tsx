@@ -48,7 +48,7 @@ export const NaverMap = () => {
           <button
             onClick={onMoveToWeddingHall}
             aria-label="예식장 중심으로"
-            className="flex flex-row items-center hover:text-gray-700 transition-colors"
+            className="flex flex-row items-center opacity-60 hover:opacity-100 transition-colors"
           >
             <svg
               viewBox="0 0 24 24"
