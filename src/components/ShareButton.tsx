@@ -60,11 +60,17 @@ export const ShareButton = () => {
             </svg>
           </div>
         </PopoverTrigger>
-        <PopoverContent>
-          <button className="w-full text-start" onClick={onCopyLink}>
+        <PopoverContent className="flex flex-col gap-1">
+          <button
+            className="w-full p-3 text-start hover:bg-gray-50"
+            onClick={onCopyLink}
+          >
             링크 복사하기
           </button>
-          <button className="w-full text-start" onClick={kakaoShare}>
+          <button
+            className="w-full p-3 text-start hover:bg-gray-50"
+            onClick={kakaoShare}
+          >
             카카오톡 공유하기
           </button>
         </PopoverContent>
