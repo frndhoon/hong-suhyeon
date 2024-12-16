@@ -120,6 +120,16 @@ export default function Home() {
             height={300}
             className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
+          <div className="w-full flex justify-center my-2">
+            <svg className="w-[500px] h-6 text-gray-300" viewBox="0 0 200 10">
+              <path
+                d="M0 5 Q 50 0, 100 5 T 200 5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+            </svg>
+          </div>
           <p className="text-md">
             차가운 바람이 따스함을 마주하려 할 때,
             <br />
@@ -127,6 +137,16 @@ export default function Home() {
             <br />
             부디 첫 매듭은 어떨지 함께 해주세요.
           </p>
+          <div className="w-full flex justify-center my-2">
+            <svg className="w-[500px] h-6 text-gray-300" viewBox="0 0 200 10">
+              <path
+                d="M0 5 Q 50 10, 100 5 T 200 5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+            </svg>
+          </div>
           <div>
             <div className="flex flex-row items-center gap-3">
               <div className="flex flex-col">
