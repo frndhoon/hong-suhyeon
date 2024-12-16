@@ -209,13 +209,34 @@ export default function Home() {
         <section className="w-full flex flex-col items-center gap-2">
           <h1>오시는 길</h1>
           <NaverMap />
-          <div className="flex flex-row gap-2 items-start w-full justify-between p-4">
-            <div>
-              <p>경북 포항시 남구 희망대로 815</p>
-              <p>티파니웨딩 5F 컨벤션홀</p>
-              <p>054-283-0077</p>
+          <div className="flex flex-col gap-5 p-4">
+            <div className="flex flex-row gap-2 items-start w-full justify-between">
+              <div>
+                <p>경북 포항시 남구 희망대로 815</p>
+                <p>티파니웨딩 5F 컨벤션홀</p>
+                <p>054-283-0077</p>
+              </div>
+              <MapActionButton address="경북 포항시 남구 희망대로 815" />
             </div>
-            <MapActionButton address="경북 포항시 남구 희망대로 815" />
+            <div className="break-keep">
+              <p>교통안내</p>
+              <p>✼ 시내버스: 305번, 900번</p>
+              <p>
+                ✼ 자가운전: 대구・포항 고속도로 이용 후 포항IC → 포항시청 방향 →
+                대잠사거리 → 포스코, 형산로터리 방향 → 포항종합운동장 정문
+                건너편
+              </p>
+              <p>
+                ✼ KTX 이용 시: KTX에서 내려서 약 30분 소요 (택시 이용 시 15km
+                거리)
+              </p>
+              <p>✼ 시외버스터미널에서 택시 이용 시: 1.5km</p>
+              <p>✼ 고속버스터미널에서 택시 이용 시: 2km</p>
+            </div>
+            <div>
+              <p>주차안내</p>
+              <p>✼ 웨딩홀 내 주차장 및 포항종합운동장 주차장 무료 이용 가능</p>
+            </div>
           </div>
         </section>
         <section className="w-full flex flex-col items-center gap-2">
