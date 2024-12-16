@@ -49,7 +49,7 @@ export const ImageWithModal = ({
         alt={alt}
         width={width}
         height={height}
-        className={`cursor-zoom-in ${className}`}
+        className={`cursor-zoom-in shadow-md ${className}`}
         onClick={() => setIsModalOpen(true)}
       />
 
