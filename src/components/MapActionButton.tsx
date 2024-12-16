@@ -27,7 +27,7 @@ export const MapActionButton = ({ address }: { address: string }) => {
   return (
     <div className="relative">
       <button
-        className="flex flex-row items-center gap-1 mt-2 hover:text-gray-600 transition-colors"
+        className="flex flex-row items-center gap-1 mt-2 opacity-60 hover:opacity-100 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg
