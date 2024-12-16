@@ -241,24 +241,61 @@ export default function Home() {
               </div>
               <MapActionButton address="경북 포항시 남구 희망대로 815" />
             </div>
-            <div className="break-keep">
-              <p>교통안내</p>
-              <p>✼ 시내버스: 305번, 900번</p>
-              <p>
-                ✼ 자가운전: 대구・포항 고속도로 이용 후 포항IC → 포항시청 방향 →
-                대잠사거리 → 포스코, 형산로터리 방향 → 포항종합운동장 정문
-                건너편
-              </p>
-              <p>
-                ✼ KTX 이용 시: KTX에서 내려서 약 30분 소요 (택시 이용 시 15km
-                거리)
-              </p>
-              <p>✼ 시외버스터미널에서 택시 이용 시: 1.5km</p>
-              <p>✼ 고속버스터미널에서 택시 이용 시: 2km</p>
+            <div className="flex flex-col break-keep">
+              <h3 className="mb-2">교통안내</h3>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <span className="text-rose-400 flex-shrink-0">✼</span>
+                  <div>
+                    <span className="font-medium">시내버스</span>
+                    <p className="text-gray-600">305번, 900번</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <span className="text-rose-400 flex-shrink-0">✼</span>
+                  <div>
+                    <span className="font-medium">자가운전</span>
+                    <p className="text-gray-600 leading-relaxed">
+                      대구・포항 고속도로 이용 후 포항IC → 포항시청 방향 →
+                      대잠사거리 → 포스코, 형산로터리 방향 → 포항종합운동장 정문
+                      건너편
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <span className="text-rose-400 flex-shrink-0">✼</span>
+                  <div>
+                    <span className="font-medium">KTX</span>
+                    <p className="text-gray-600">
+                      KTX에서 내려서 약 30분 소요 (택시 이용 시 15km 거리)
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <span className="text-rose-400 flex-shrink-0">✼</span>
+                  <div>
+                    <span className="font-medium">터미널</span>
+                    <p className="text-gray-600">
+                      시외버스터미널: 1.5km (택시 이용)
+                      <br />
+                      고속버스터미널: 2km (택시 이용)
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <p>주차안내</p>
-              <p>✼ 웨딩홀 내 주차장 및 포항종합운동장 주차장 무료 이용 가능</p>
+
+            <div className="break-keep">
+              <h3 className="mb-2">주차안내</h3>
+              <div className="flex items-start gap-2">
+                <span className="text-rose-400">✼</span>
+                <p className="text-gray-600">
+                  웨딩홀 내 주차장 및 포항종합운동장 주차장 무료 이용 가능
+                </p>
+              </div>
             </div>
           </div>
         </section>
