@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface Contact {
   name: string;
@@ -35,9 +36,13 @@ export const ContactModal = ({
   if (!isOpen) return null;
 
   return (
-    <div
+    <motion.div
       className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-4"
       onClick={onClose}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ ease: 'easeInOut', duration: 0.3 }}
     >
       <div
         className="bg-white rounded-lg w-[400px] h-[600px] shadow-lg"
@@ -127,6 +132,6 @@ export const ContactModal = ({
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

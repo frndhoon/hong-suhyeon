@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
+import { AnimatePresence } from 'framer-motion';
 import { ImageWithModal } from '@/components/ImageWithModal';
 import { NaverMap } from '@/components/NaverMap';
 import { MapActionButton } from '@/components/MapActionButton';
@@ -148,13 +149,15 @@ export default function Home() {
           >
             연락하기
           </button>
-          {isContactModalOpen && (
-            <ContactModal
-              contacts={contacts}
-              isOpen={isContactModalOpen}
-              onClose={() => setIsContactModalOpen(false)}
-            />
-          )}
+          <AnimatePresence>
+            {isContactModalOpen && (
+              <ContactModal
+                contacts={contacts}
+                isOpen={isContactModalOpen}
+                onClose={() => setIsContactModalOpen(false)}
+              />
+            )}
+          </AnimatePresence>
         </section>
         <section>
           <ImageWithModal
