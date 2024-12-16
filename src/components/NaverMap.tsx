@@ -47,7 +47,7 @@ export const NaverMap = () => {
         <div className="z-20 absolute bottom-5 right-5">
           <button
             onClick={onMoveToWeddingHall}
-            aria-label="결혼식장으로 이동"
+            aria-label="예식장 중심으로"
             className="flex flex-row items-center hover:text-gray-700 transition-colors"
           >
             <svg
@@ -61,7 +61,7 @@ export const NaverMap = () => {
                 <path d="M13.4227 17.3618L16.9348 8.19598C17.2164 7.46107 16.5389 6.78361 15.804 7.06521L6.63824 10.5773C5.80779 10.8955 5.78079 12.06 6.5981 12.3083L10.0751 13.3648C10.3455 13.447 10.553 13.6545 10.6352 13.9249L11.6917 17.4019C11.94 18.2192 13.1045 18.1922 13.4227 17.3618Z"></path>
               </g>
             </svg>
-            <span className="text-sm">결혼식장으로 이동</span>
+            <span className="text-sm">예식장 중심으로</span>
           </button>
         </div>
       </div>
