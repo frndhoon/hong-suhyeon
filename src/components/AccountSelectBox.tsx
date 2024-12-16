@@ -77,6 +77,7 @@ export const AccountSelectBox = ({
                   <div className="flex flex-row gap-2 items-center justify-end">
                     <button
                       onClick={() => handleAccountCopy(account.accountNumber)}
+                      className="opacity-60 hover:opacity-100 transition-opacity"
                     >
                       <svg
                         viewBox="0 0 24.00 24.00"
