@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Popover, PopoverTrigger, PopoverContent } from './ui/Popover';
+import toast from 'react-hot-toast';
 import Script from 'next/script';
 import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 
@@ -10,6 +11,7 @@ export const ShareButton = () => {
   const onCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
     setOpen(false);
+    toast('링크가 복사되었습니다.');
   };
 
   const kakaoInit = () => {
