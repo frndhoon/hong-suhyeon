@@ -307,7 +307,12 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="w-full flex flex-col items-center mt-10">
+        <div className="w-full flex items-center justify-center gap-4 my-4">
+          <div className="h-px bg-gray-200 flex-grow" />
+          <div className="text-gray-400">❀</div>
+          <div className="h-px bg-gray-200 flex-grow" />
+        </div>
+        <section className="w-full flex flex-col items-center mt-24">
           <ShareButton />
         </section>
       </main>
