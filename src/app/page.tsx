@@ -327,7 +327,7 @@ export default function Home() {
           <FadeInOut delay={0.3}>
             <div className="flex flex-col items-center gap-2">
               <h1>마음 전하실 곳</h1>
-              <div className="max-w-[600px] min-w-[400px] flex flex-col gap-2 items-center">
+              <div className="max-w-[400px] min-w-[368px] flex flex-col gap-2 items-center">
                 <AccountSelectBox
                   title="신랑측 계좌번호"
                   accounts={[
