@@ -99,7 +99,7 @@ export default function Home() {
   return (
     <>
       <main className="w-full max-w-[600px] mx-auto px-4 flex flex-col items-center gap-2">
-        <section className="w-full flex flex-col items-center">
+        <section>
           <ImageWithModal
             src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbwQrOj%2FbtsLm3D08YC%2FFaaRsoIjL6t7dHQd2yD5Jk%2Fimg.png"
             alt="메인 웨딩 사진"
@@ -108,13 +108,14 @@ export default function Home() {
             priority={true}
             className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
-          <h1>WEDDING INVITATION</h1>
-          <h2>김홍 | 김수현</h2>
-          <p>2025년 2월 23일 일요일 오후 1:00</p>
-          <hr />
-          <p>티파니웨딩청솔밭 5F</p>
+          <div className="flex flex-col items-center">
+            <h1>WEDDING INVITATION</h1>
+            <h2>김홍 | 김수현</h2>
+            <p>2025년 2월 23일 일요일 오후 1:00</p>
+            <p>티파니웨딩청솔밭 5F</p>
+          </div>
         </section>
-        <section className="w-full flex flex-col items-center gap-2">
+        <section>
           <ImageWithModal
             src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbCa6Jx%2FbtsLnmi5gNp%2FXCodBjwesluDNNkAbubWx1%2Fimg.jpg"
             alt="서브 웨딩 사진"
@@ -132,7 +133,7 @@ export default function Home() {
               />
             </svg>
           </div>
-          <p className="text-md">
+          <p className="text-md text-center">
             차가운 바람이 따스함을 마주하려 할 때,
             <br />
             서로 다른 두 실을 하나의 어여쁜 매듭으로 만들고자 합니다.
@@ -149,8 +150,8 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div>
-            <div className="flex flex-row items-center gap-3">
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-row items-center gap-3 mr-[13px]">
               <div className="flex flex-col">
                 <p>김완수</p>
                 <p>권가영</p>
@@ -164,13 +165,13 @@ export default function Home() {
               </div>
               <p>의 장녀 수현</p>
             </div>
+            <button
+              className="border border-1 rounded-3xl px-2 py-1 hover:text-gray-600"
+              onClick={() => setIsContactModalOpen(!isContactModalOpen)}
+            >
+              연락하기
+            </button>
           </div>
-          <button
-            className="border border-1 rounded-3xl px-2 py-1 hover:text-gray-600"
-            onClick={() => setIsContactModalOpen(!isContactModalOpen)}
-          >
-            연락하기
-          </button>
           <AnimatePresence>
             {isContactModalOpen && (
               <ContactModal
@@ -231,8 +232,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full flex flex-col items-center gap-2">
-          <h1>오시는 길</h1>
+        <section>
+          <h1 className="text-center mt-10 mb-2">오시는 길</h1>
           <NaverMap />
           <div className="flex flex-col gap-5 p-4">
             <div className="flex flex-row gap-2 items-start w-full justify-between">
@@ -301,49 +302,51 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full flex flex-col items-center gap-2">
-          <h1>마음 전하실 곳</h1>
-          <div className="w-full flex flex-col gap-2 items-center">
-            <AccountSelectBox
-              title="신랑측 계좌번호"
-              accounts={[
-                {
-                  name: '신랑 김홍',
-                  accountName: '카카오뱅크',
-                  accountNumber: '3333-04-5085349',
-                },
-                {
-                  name: '아버지 김완수',
-                  accountName: '우리은행',
-                  accountNumber: '010-9999-3402',
-                },
-                {
-                  name: '어머니 권가영',
-                  accountName: '농협은행',
-                  accountNumber: '302-1008-6057-51',
-                },
-              ]}
-            />
-            <AccountSelectBox
-              title="신부측 계좌번호"
-              accounts={[
-                {
-                  name: '신부 김수현',
-                  accountName: '카카오뱅크',
-                  accountNumber: '3333-07-0061867',
-                },
-                {
-                  name: '아버지 김성규',
-                  accountName: '국민은행',
-                  accountNumber: '801301-01-345656',
-                },
-                {
-                  name: '어머니 이금란',
-                  accountName: '국민은행',
-                  accountNumber: '99927711449',
-                },
-              ]}
-            />
+        <section>
+          <div className="flex flex-col items-center gap-2">
+            <h1>마음 전하실 곳</h1>
+            <div className="max-w-[600px] min-w-[400px] flex flex-col gap-2 items-center">
+              <AccountSelectBox
+                title="신랑측 계좌번호"
+                accounts={[
+                  {
+                    name: '신랑 김홍',
+                    accountName: '카카오뱅크',
+                    accountNumber: '3333-04-5085349',
+                  },
+                  {
+                    name: '아버지 김완수',
+                    accountName: '우리은행',
+                    accountNumber: '010-9999-3402',
+                  },
+                  {
+                    name: '어머니 권가영',
+                    accountName: '농협은행',
+                    accountNumber: '302-1008-6057-51',
+                  },
+                ]}
+              />
+              <AccountSelectBox
+                title="신부측 계좌번호"
+                accounts={[
+                  {
+                    name: '신부 김수현',
+                    accountName: '카카오뱅크',
+                    accountNumber: '3333-07-0061867',
+                  },
+                  {
+                    name: '아버지 김성규',
+                    accountName: '국민은행',
+                    accountNumber: '801301-01-345656',
+                  },
+                  {
+                    name: '어머니 이금란',
+                    accountName: '국민은행',
+                    accountNumber: '99927711449',
+                  },
+                ]}
+              />
+            </div>
           </div>
         </section>
         <div className="w-full flex items-center justify-center gap-4 my-4">
@@ -351,11 +354,11 @@ export default function Home() {
           <div className="text-gray-400">❀</div>
           <div className="h-px bg-gray-200 flex-grow" />
         </div>
-        <section className="w-full flex flex-col items-center mt-24">
+        <section className="mt-24">
           <ShareButton />
         </section>
       </main>
-      <footer className="w-full text-center py-4">
+      <footer className="text-center py-10">
         <p>© 2024 NerdAnimals. All rights reserved.</p>
       </footer>
     </>
