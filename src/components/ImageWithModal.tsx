@@ -1,12 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image, { StaticImageData } from 'next/image';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ImageWithModalProps {
-  src: string | StaticImageData;
+  src: string;
   alt: string;
   width?: number;
   height?: number;
@@ -50,7 +49,7 @@ export const ImageWithModal = ({
 
   return (
     <>
-      <Image
+      <img
         src={src}
         alt={alt}
         width={width}
@@ -94,7 +93,7 @@ export const ImageWithModal = ({
                       </svg>
                     </button>
                   )}
-                  <Image
+                  <img
                     src={currentImage || src}
                     alt={alt}
                     width={width}

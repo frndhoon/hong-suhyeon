@@ -8,9 +8,6 @@ import { ImageWithModal } from '@/components/ImageWithModal';
 import { NaverMap } from '@/components/NaverMap';
 import { MapActionButton } from '@/components/MapActionButton';
 import { AccountSelectBox } from '@/components/AccountSelectBox';
-import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
-import subWeddingImg from '@/public/images/subWeddingImg.jpg';
-import calendarWeddingImg from '@/public/images/calendarWeddingImg.jpg';
 import { ContactModal } from '@/components/ContactModal';
 import { ShareButton } from '@/components/ShareButton';
 
@@ -20,9 +17,15 @@ export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
 
-  const weddingImages = Array.from({ length: 7 }).map(
-    (_, index) => `/images/weddingImg0${index + 1}.jpg`
-  );
+  const weddingImages = [
+    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FduN8o4%2FbtsLm59IOxY%2FKGOJxZkygf8sCTt1ACkvH1%2Fimg.jpg',
+    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMfRRw%2FbtsLnOGcki0%2F9xDp7t6BJkfbn1IqFxDy10%2Fimg.jpg',
+    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbm2Ngm%2FbtsLop6ZfAg%2FjmdgUwRF6Ni0FGd3dcdyS1%2Fimg.jpg',
+    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdYNeBk%2FbtsLmmEckzZ%2F1wbvUhWhC626oy7jXk9p80%2Fimg.jpg',
+    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FxMyFm%2FbtsLn7MhJ5y%2Fy6VPRnAbnAnuBUtTvCtwvk%2Fimg.jpg',
+    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fn2B91%2FbtsLnldrjqA%2FEIMkot7eDwjaYC2o6Ge7N1%2Fimg.jpg',
+    'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbIC5dx%2FbtsLoavqPnd%2FZcK8K3eH4uDeMfhowkNnxk%2Fimg.jpg',
+  ];
 
   const handlePrevImage = () => {
     setModalImageIndex((prev) =>
@@ -98,14 +101,13 @@ export default function Home() {
       <main className="w-full max-w-[600px] mx-auto px-4 flex flex-col items-center gap-2">
         <section className="w-full flex flex-col items-center">
           <ImageWithModal
-            src={mainWeddingImg}
+            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbwQrOj%2FbtsLm3D08YC%2FFaaRsoIjL6t7dHQd2yD5Jk%2Fimg.png"
             alt="메인 웨딩 사진"
             width={500}
             height={300}
             priority={true}
             className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
           />
-
           <h1>WEDDING INVITATION</h1>
           <h2>김홍 | 김수현</h2>
           <p>2025년 2월 23일 일요일 오후 1:00</p>
@@ -114,7 +116,7 @@ export default function Home() {
         </section>
         <section className="w-full flex flex-col items-center gap-2">
           <ImageWithModal
-            src={subWeddingImg}
+            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbCa6Jx%2FbtsLnmi5gNp%2FXCodBjwesluDNNkAbubWx1%2Fimg.jpg"
             alt="서브 웨딩 사진"
             width={500}
             height={300}
@@ -181,7 +183,7 @@ export default function Home() {
         </section>
         <section>
           <ImageWithModal
-            src={calendarWeddingImg}
+            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fu873n%2FbtsLoLPxTvg%2FdMxgTuIGIvKCWFAkPbSrj0%2Fimg.png"
             alt="웨딩 사진"
             width={500}
             height={300}

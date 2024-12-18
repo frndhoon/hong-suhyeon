@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Popover, PopoverTrigger, PopoverContent } from './ui/Popover';
 import toast from 'react-hot-toast';
 import Script from 'next/script';
-import mainWeddingImg from '@/public/images/mainWeddingImg.jpg';
 
 export const ShareButton = () => {
   const [open, setOpen] = useState(false);
@@ -24,7 +23,8 @@ export const ShareButton = () => {
       content: {
         title: '김홍 ♥ 김수현 결혼합니다',
         description: '2월 23일 오후 1시',
-        imageUrl: mainWeddingImg.src, // 이미지 삽입이 되지 않는 문제 발생
+        imageUrl:
+          'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbwQrOj%2FbtsLm3D08YC%2FFaaRsoIjL6t7dHQd2yD5Jk%2Fimg.png',
         imageWidth: 640,
         imageHeight: 480,
         link: {
