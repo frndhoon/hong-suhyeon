@@ -35,31 +35,24 @@ div {
 }
 
 .slick-prev {
-  left: 0px;
+  left: 5px !important;
 }
 
 .slick-next {
-  right: 0px;
+  right: 5px !important;
 }
 
 .slick-prev,
 .slick-next {
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 10;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: #666;
+  color: #333 !important;
   font-size: 20px;
   opacity: 1;
   transition: all 0.3s ease;
-}
-
-.slick-prev:hover:before,
-.slick-next:hover:before {
-  color: #333;
 }

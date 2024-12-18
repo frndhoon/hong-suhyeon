@@ -130,7 +130,10 @@ export default function Home() {
           </FadeInOut>
           <FadeInOut>
             <div className="w-full flex justify-center my-2">
-              <svg className="w-[500px] h-6 text-gray-300" viewBox="0 0 200 10">
+              <svg
+                className="w-full max-w-[500px] h-6 text-gray-300"
+                viewBox="0 0 200 10"
+              >
                 <path
                   d="M0 5 Q 50 0, 100 5 T 200 5"
                   fill="none"
@@ -147,7 +150,10 @@ export default function Home() {
               부디 첫 매듭은 어떨지 함께 해주세요.
             </p>
             <div className="w-full flex justify-center my-2">
-              <svg className="w-[500px] h-6 text-gray-300" viewBox="0 0 200 10">
+              <svg
+                className="w-full max-w-[500px] h-6 text-gray-300"
+                viewBox="0 0 200 10"
+              >
                 <path
                   d="M0 5 Q 50 10, 100 5 T 200 5"
                   fill="none"
