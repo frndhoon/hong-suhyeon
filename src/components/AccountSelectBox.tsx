@@ -13,9 +13,24 @@ export const AccountSelectBox = ({
 }) => {
   const [isSelectedOpen, setIsSelectedOpen] = useState(false);
 
-  const handleAccountCopy = (account: string) => {
-    navigator.clipboard.writeText(account);
-    toast('계좌번호가 복사되었습니다.');
+  const handleAccountCopy = (account: {
+    name: string;
+    accountName: string;
+    accountNumber: string;
+  }) => {
+    navigator.clipboard.writeText(account.accountNumber);
+    toast(
+      <span>
+        <strong>복사완료</strong>
+        <br />
+        {account.accountName} {account.accountNumber}
+      </span>,
+      {
+        style: {
+          width: '270px',
+        },
+      }
+    );
   };
 
   return (
@@ -51,7 +66,7 @@ export const AccountSelectBox = ({
                     <div className="flex flex-row gap-2 items-center justify-between">
                       <span>{account.accountNumber}</span>
                       <button
-                        onClick={() => handleAccountCopy(account.accountNumber)}
+                        onClick={() => handleAccountCopy(account)}
                         className="flex flex-row items-center gap-1 hover:opacity-60 transition-opacity"
                       >
                         <svg
