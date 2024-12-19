@@ -214,10 +214,10 @@ export default function Home() {
           <FadeInOut delay={0.3}>
             <ImageWithModal
               src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fu873n%2FbtsLoLPxTvg%2FdMxgTuIGIvKCWFAkPbSrj0%2Fimg.png"
-              alt="웨딩 사진"
+              alt="달력 사진"
               width={500}
               height={300}
-              className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
+              className="my-4 rounded-lg object-cover w-full aspect-[1/1] max-w-[500px] object-top"
             />
           </FadeInOut>
         </section>
