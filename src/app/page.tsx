@@ -179,14 +179,18 @@ export default function Home() {
                   <p>김완수</p>
                   <p>권가영</p>
                 </div>
-                <p>의 장남 홍</p>
+                <p>
+                  의 장남 <span className="font-bold">홍</span>
+                </p>
               </div>
               <div className="flex flex-row items-center gap-3">
                 <div className="flex flex-col">
                   <p>김성규</p>
                   <p>이금란</p>
                 </div>
-                <p>의 장녀 수현</p>
+                <p>
+                  의 장녀 <span className="font-bold">수현</span>
+                </p>
               </div>
               <button
                 className="border border-1 rounded-3xl px-2 py-1 hover:text-gray-600"
