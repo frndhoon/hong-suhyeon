@@ -22,9 +22,9 @@ export const ShareButton = () => {
       objectType: 'feed',
       content: {
         title: '김홍 ♥ 김수현 결혼합니다',
-        description: '2월 23일 오후 1시',
+        description: '2025년 2월 23일 오후 1시\n포항, 티파니웨딩청솔밭',
         imageUrl:
-          'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbwQrOj%2FbtsLm3D08YC%2FFaaRsoIjL6t7dHQd2yD5Jk%2Fimg.png',
+          'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCLpdx%2FbtsLogwVUOp%2F8F8ijoyaHHVhgQZHgrnCw1%2Fimg.png',
         imageWidth: 640,
         imageHeight: 480,
         link: {
@@ -32,6 +32,15 @@ export const ShareButton = () => {
           mobileWebUrl: window.location.href,
         },
       },
+      buttons: [
+        {
+          title: '모바일 청첩장 보기',
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href,
+          },
+        },
+      ],
     });
   };
 

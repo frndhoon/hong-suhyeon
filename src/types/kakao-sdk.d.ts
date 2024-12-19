@@ -15,6 +15,13 @@ interface Window {
             mobileWebUrl: string;
           };
         };
+        buttons: {
+          title: string;
+          link: {
+            mobileWebUrl: string;
+            webUrl: string;
+          };
+        }[];
       }) => void;
     };
   };
