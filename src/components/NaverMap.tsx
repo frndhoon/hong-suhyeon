@@ -44,17 +44,17 @@ export const NaverMap = () => {
       />
       <div className="flex flex-col items-center relative w-full h-[300px]">
         <div id="naver-map" className="z-10 w-full h-full absolute"></div>
-        <div className="z-20 absolute bottom-5 right-5">
+        <div className="z-20 absolute bottom-5 right-3">
           <button
             onClick={onMoveToWeddingHall}
             aria-label="예식장 중심으로"
-            className="flex flex-row items-center opacity-60 hover:opacity-100 transition-colors"
+            className="flex flex-row items-center opacity-70 hover:opacity-100 transition-opacity bg-white rounded-lg px-2 py-1"
           >
             <svg
               viewBox="0 0 24 24"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
+              width="22"
               height="24"
             >
               <g id="SVGRepo_iconCarrier">
