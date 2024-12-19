@@ -405,7 +405,13 @@ export default function Home() {
       </main>
       <footer className="text-center py-10">
         <FadeInOut>
-          <p>© 2024 NerdAnimals. All rights reserved.</p>
+          <p>
+            © 2024{' '}
+            <a href="https://github.com/frndhoon" target="_blank">
+              frndhoon
+            </a>
+            . All rights reserved.
+          </p>
         </FadeInOut>
       </footer>
     </>
