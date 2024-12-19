@@ -9,7 +9,13 @@ export const MapActionButton = ({ address }: { address: string }) => {
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(address);
     setIsOpen(false);
-    toast('주소가 복사되었습니다.');
+    toast(
+      <span>
+        <strong>복사완료</strong>
+        <br />
+        {address}
+      </span>
+    );
   };
 
   const handleNaverMapClick = () => {
