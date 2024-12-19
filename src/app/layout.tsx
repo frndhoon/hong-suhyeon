@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.png',
   },
+  openGraph: {
+    title: '김홍 ♥ 김수현 결혼합니다',
+    description: '2월 23일 오후 1시',
+  },
 };
 
 export default function RootLayout({
