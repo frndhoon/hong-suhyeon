@@ -45,7 +45,7 @@ export const ShareButton = () => {
       />
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger>
-          <div>
+          <div className="flex items-center gap-2 text-sm border p-2 hover:text-gray-600 rounded-lg">
             <svg
               width="15"
               height="15"
@@ -60,6 +60,7 @@ export const ShareButton = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
+            공유하기
           </div>
         </PopoverTrigger>
         <PopoverContent className="flex flex-col gap-1">
