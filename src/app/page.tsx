@@ -11,6 +11,8 @@ import { AccountSelectBox } from '@/components/AccountSelectBox';
 import { ContactModal } from '@/components/ContactModal';
 import { ShareButton } from '@/components/ShareButton';
 import { FadeInOut } from '@/components/FadeInOut';
+import heartIcon from '@/public/icons/white_heart_128x128.png';
+import ribbonIcon from '@/public/icons/ribbon_128x128.png';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -113,6 +115,13 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h1>WEDDING INVITATION</h1>
               <h2>김홍 | 김수현</h2>
+              <img
+                src={heartIcon.src}
+                alt="heart"
+                width={30}
+                height={30}
+                className="my-2"
+              />
               <p>2025년 2월 23일 일요일 오후 1:00</p>
               <p>티파니웨딩청솔밭 5F</p>
             </div>
@@ -210,7 +219,7 @@ export default function Home() {
         </section>
         <section className="w-full">
           <FadeInOut delay={0.3}>
-            <div className="slider-container">
+            <div className="slider-container mb-10">
               <Slider ref={setSliderRef} {...sliderSettings}>
                 {weddingImages.map((imageSrc, index) => (
                   <div
@@ -248,12 +257,19 @@ export default function Home() {
                 ))}
               </Slider>
             </div>
+            <img
+              src={ribbonIcon.src}
+              alt="ribbon"
+              width={30}
+              height={30}
+              className="mx-auto mt-10"
+            />
           </FadeInOut>
         </section>
 
-        <section>
+        <section className="mt-10">
           <FadeInOut delay={0.3}>
-            <h1 className="text-center mt-10 mb-2">오시는 길</h1>
+            <h1 className="text-center mb-2">오시는 길</h1>
             <NaverMap />
             <div className="flex flex-col gap-5 p-4">
               <div className="flex flex-row gap-2 items-start w-full justify-between">
@@ -373,13 +389,15 @@ export default function Home() {
           </FadeInOut>
         </section>
         <FadeInOut>
-          <div className="w-full flex items-center justify-center gap-4 my-4">
-            <div className="h-px bg-gray-200 flex-grow" />
-            <div className="text-gray-400">❀</div>
-            <div className="h-px bg-gray-200 flex-grow" />
-          </div>
+          <img
+            src={heartIcon.src}
+            alt="heart"
+            width={30}
+            height={30}
+            className="mx-auto mt-10"
+          />
         </FadeInOut>
-        <section className="mt-24">
+        <section className="mt-32">
           <FadeInOut>
             <ShareButton />
           </FadeInOut>
