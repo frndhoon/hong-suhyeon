@@ -343,7 +343,7 @@ export default function Home() {
             </div>
           </FadeInOut>
         </section>
-        <section>
+        <section className="mt-1">
           <FadeInOut delay={0.3}>
             <div className="flex flex-col items-center gap-2">
               <h1>마음 전하실 곳</h1>
