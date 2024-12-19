@@ -18,7 +18,9 @@ export const AccountSelectBox = ({
     accountName: string;
     accountNumber: string;
   }) => {
-    navigator.clipboard.writeText(account.accountNumber);
+    navigator.clipboard.writeText(
+      account.accountName + ' ' + account.accountNumber
+    );
     toast(
       <span>
         <strong>복사완료</strong>
