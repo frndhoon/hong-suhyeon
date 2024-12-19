@@ -134,7 +134,7 @@ export default function Home() {
               alt="서브 웨딩 사진"
               width={500}
               height={300}
-              className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
+              className="my-4 rounded-lg object-cover w-full aspect-[1/1.1] max-w-[500px] object-top"
             />
           </FadeInOut>
           <FadeInOut>
