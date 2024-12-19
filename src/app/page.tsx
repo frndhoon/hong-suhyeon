@@ -105,12 +105,12 @@ export default function Home() {
         <section>
           <FadeInOut>
             <ImageWithModal
-              src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbwQrOj%2FbtsLm3D08YC%2FFaaRsoIjL6t7dHQd2yD5Jk%2Fimg.png"
+              src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1h2PT%2FbtsLoyw7WXv%2F8xulu006Q13yk3zbyNQRL0%2Fimg.png"
               alt="메인 웨딩 사진"
               width={500}
               height={300}
               priority={true}
-              className="my-4 rounded-lg object-cover w-[500px] h-[500px] object-top"
+              className="my-4 rounded-lg object-cover w-full aspect-[1/1.1] max-w-[500px] object-top"
             />
             <div className="flex flex-col items-center">
               <h1>WEDDING INVITATION</h1>
